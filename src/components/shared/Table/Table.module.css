@@ -1,0 +1,94 @@
+/**
+ * Стили для компонента Table
+ * Контейнер таблицы
+ */
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+/**
+ * Основная таблица
+ */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+/**
+ * Стили строки заголовка
+ */
+.headerRow {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #e9ecef;
+}
+
+/**
+ * Стили ячейки заголовка
+ */
+.headerCell {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  color: #495057;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/**
+ * Стили для сообщения о пустой таблице
+ */
+.emptyMessage {
+  padding: 40px 16px;
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  font-size: 16px;
+}
+
+/**
+ * Адаптивные стили для мобильных устройств
+ */
+@media (max-width: 768px) {
+  .tableContainer {
+    margin: 10px 0;
+    border-radius: 6px;
+  }
+  
+  .headerCell {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+  
+  .emptyMessage {
+    padding: 30px 8px;
+    font-size: 14px;
+  }
+}
+
+/**
+ * Стили для скролла таблицы
+ */
+.tableContainer::-webkit-scrollbar {
+  height: 8px;
+}
+
+.tableContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.tableContainer::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+.tableContainer::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

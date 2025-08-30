@@ -1,0 +1,68 @@
+{
+  "name": "ra-form-steps",
+  "private": false,
+  "version": "0.0.1",
+  "description": "React. Steps sports training",
+  "main": "src/main.tsx",
+  "author": "N.Yurchenko <NMYurchenko@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NMYurchenko-max/ra-form-steps/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NMYurchenko-max/ra-form-steps.git"
+  },
+  "homepage": "https://github.com/NMYurchenko-max/ra-form-steps#readme",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint \"src/**/*.ts?(x|js)\" --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint \"src/**/*.ts?(x|js)\" --ext .ts,.tsx,.js,.jsx --fix",
+    "format": "prettier \"src/**/*.ts?(x|js)\" --write",
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist",
+    "typecheck": "tsc --noEmit",
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:e2e": "cypress run --spec \"cypress/e2e/app.cy.ts\"",
+    "test:wait": "timeout /t 5 && yarn test:e2e"
+  },
+  "dependencies": {
+    "@types/uuid": "^10.0.0",
+    "classnames": "2.5.1",
+    "emoji-picker-react": "4.13.2",
+    "loader-utils": "^3.3.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "uuid": "^11.0.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/chai": "^5.2.2",
+    "@types/cypress": "^0.1.6",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^24.3.0",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "@vitejs/plugin-react": "^5.0.0",
+    "cypress": "^15.0.0",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "gh-pages": "^6.3.0",
+    "globals": "^16.3.0",
+    "prettier": "^3.6.2",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.39.1",
+    "vite": "^7.1.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

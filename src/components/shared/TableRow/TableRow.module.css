@@ -1,0 +1,59 @@
+/**
+ * Стили для компонента TableRow
+ * Стили строки таблицы
+ */
+.row {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/**
+ * Стили строки при наведении
+ */
+.row:hover {
+  background-color: #f5f5f5;
+}
+
+/**
+ * Стили ячейки таблицы
+ */
+.cell {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+}
+
+/**
+ * Стили для ячейки с действиями (иконки)
+ */
+.cellActions {
+  padding: 12px 16px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/**
+ * Контейнер для иконок действий
+ */
+.cellActions > * {
+  margin: 0 4px;
+}
+
+/**
+ * Адаптивные стили для мобильных устройств
+ */
+@media (max-width: 768px) {
+  .cell {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+  
+  .cellActions {
+    padding: 8px 12px;
+  }
+  
+  .cellActions > * {
+    margin: 0 2px;
+  }
+}

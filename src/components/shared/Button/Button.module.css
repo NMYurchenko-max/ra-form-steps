@@ -1,0 +1,81 @@
+/**
+ * Стили для компонента Button
+ * Базовые стили кнопки
+ */
+.button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  min-width: 100px;
+  text-align: center;
+}
+
+/**
+ * Стили для primary кнопки (основной)
+ */
+.primary {
+  background-color: #646cff;
+  color: white;
+}
+
+.primary:hover:not(.disabled) {
+  background-color: #535bf2;
+  transform: translateY(-1px);
+}
+
+.primary:active:not(.disabled) {
+  background-color: #434ce0;
+  transform: translateY(0);
+}
+
+/**
+ * Стили для secondary кнопки (вторичной)
+ */
+.secondary {
+  background-color: #f1f3f4;
+  color: #5f6368;
+  border: 1px solid #dadce0;
+}
+
+.secondary:hover:not(.disabled) {
+  background-color: #e8eaed;
+  border-color: #c6c9ce;
+}
+
+.secondary:active:not(.disabled) {
+  background-color: #dadce0;
+}
+
+/**
+ * Стили для danger кнопки (опасное действие)
+ */
+.danger {
+  background-color: #ea4335;
+  color: white;
+}
+
+.danger:hover:not(.disabled) {
+  background-color: #d33426;
+  transform: translateY(-1px);
+}
+
+.danger:active:not(.disabled) {
+  background-color: #bb2a1d;
+  transform: translateY(0);
+}
+
+/**
+ * Стили для отключенной кнопки
+ */
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  transform: none !important;
+}

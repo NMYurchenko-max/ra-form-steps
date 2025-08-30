@@ -1,0 +1,96 @@
+/**
+ * Стили для компонента Icon
+ * Базовые стили иконки
+ */
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+}
+
+/**
+ * Стили для иконки при наведении (кроме отключенной)
+ */
+.icon:not(.disabled):hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+/**
+ * Стили для иконки при активном состоянии (клике)
+ */
+.icon:not(.disabled):active {
+  transform: scale(0.95);
+}
+
+/**
+ * Стили для иконки удаления
+ */
+.delete {
+  color: #ea4335; /* Красный цвет для удаления */
+}
+
+.delete:not(.disabled):hover {
+  background-color: rgba(234, 67, 53, 0.1);
+}
+
+/**
+ * Стили для иконки редактирования
+ */
+.edit {
+  color: #4285f4; /* Синий цвет для редактирования */
+}
+
+.edit:not(.disabled):hover {
+  background-color: rgba(66, 133, 244, 0.1);
+}
+
+/**
+ * Стили для иконки добавления
+ */
+.add {
+  color: #34a853; /* Зеленый цвет для добавления */
+}
+
+.add:not(.disabled):hover {
+  background-color: rgba(52, 168, 83, 0.1);
+}
+
+/**
+ * Стили для иконки подтверждения
+ */
+.check {
+  color: #34a853; /* Зеленый цвет для подтверждения */
+}
+
+.check:not(.disabled):hover {
+  background-color: rgba(52, 168, 83, 0.1);
+}
+
+/**
+ * Стили для отключенной иконки
+ */
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  background-color: transparent !important;
+  transform: none !important;
+}
+
+/**
+ * Фокус для доступности
+ */
+.icon:focus {
+  outline: 2px solid #646cff;
+  outline-offset: 2px;
+}

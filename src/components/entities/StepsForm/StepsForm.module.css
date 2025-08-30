@@ -1,0 +1,118 @@
+/**
+ * Стили для компонента StepsForm
+ * Основная форма
+ */
+.form {
+  background-color: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+/**
+ * Строка формы (контейнер для полей ввода и кнопок)
+ */
+.formRow {
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+/**
+ * Группа ввода (лейбл + инпут + ошибка)
+ */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+/**
+ * Лейбл для поля ввода
+ */
+.label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/**
+ * Стили для поля ввода с ошибкой
+ */
+.inputError {
+  border-color: #ea4335 !important;
+}
+
+.inputError:focus {
+  box-shadow: 0 0 0 3px rgba(234, 67, 53, 0.1) !important;
+}
+
+/**
+ * Сообщение об ошибке
+ */
+.error {
+  font-size: 12px;
+  color: #ea4335;
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+/**
+ * Группа кнопок
+ */
+.buttonGroup {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  min-height: 72px; /* Высота соответствует высоте группы ввода */
+}
+
+/**
+ * Адаптивные стили для мобильных устройств
+ */
+@media (max-width: 768px) {
+  .form {
+    padding: 16px;
+  }
+  
+  .formRow {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .inputGroup {
+    min-width: 100%;
+  }
+  
+  .buttonGroup {
+    min-height: auto;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .buttonGroup button {
+    flex: 1;
+  }
+}
+
+/**
+ * Анимация появления формы
+ */
+.form {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

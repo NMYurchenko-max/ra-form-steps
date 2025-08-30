@@ -1,0 +1,139 @@
+/**
+ * Стили для главного компонента App
+ * Основной контейнер приложения
+ */
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/**
+ * Заголовок приложения
+ */
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+  color: white;
+}
+
+/**
+ * Заголовок приложения
+ */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/**
+ * Подзаголовок приложения
+ */
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 300;
+}
+
+/**
+ * Основное содержимое
+ */
+.main {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/**
+ * Подвал приложения
+ */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+/**
+ * Адаптивные стили для планшетов
+ */
+@media (max-width: 1024px) {
+  .app {
+    padding: 16px;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+/**
+ * Адаптивные стили для мобильных устройств
+ */
+@media (max-width: 768px) {
+  .app {
+    padding: 12px;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .footer {
+    margin-top: 24px;
+    padding: 16px;
+  }
+}
+
+/**
+ * Анимация появления приложения
+ */
+.app {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/**
+ * Глобальные стили для скроллбара
+ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
