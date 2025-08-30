@@ -69,7 +69,7 @@ const Button: React.FC<ButtonProps> = ({
       className={buttonClasses}
       onClick={handleClick}
       disabled={disabled}
-      {...(disabled ? { 'aria-disabled': 'true' } : {})}
+      aria-disabled={disabled ? 'true' : undefined}
     >
       {children}
     </button>

@@ -68,28 +68,21 @@ const Icon: React.FC<IconProps> = ({
   // Формируем классы для иконки
   const iconClasses = `${styles.icon} ${styles[type]} ${disabled ? styles.disabled : ''} ${className}`.trim();
 
-  // Создаем объект с props для span
-  const spanProps = {
-    className: iconClasses,
-    onClick: handleClick,
-    title: title,
-    role: 'button',
-    tabIndex: disabled ? -1 : 0,
-    onKeyDown: (e: React.KeyboardEvent) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        handleClick();
-      }
-    }
-  };
-
-  // Добавляем aria-disabled только если иконка отключена
-  if (disabled) {
-    (spanProps as any)['aria-disabled'] = 'true';
-  }
-
   return (
-    <span {...spanProps}>
+    <span
+      className={iconClasses}
+      onClick={handleClick}
+      title={title}
+      role="button"
+      tabIndex={disabled ? -1 : 0}
+      onKeyDown={(e: React.KeyboardEvent) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          handleClick();
+        }
+      }}
+      aria-disabled={disabled ? 'true' : undefined}
+    >
       {getIconSymbol()}
     </span>
   );
